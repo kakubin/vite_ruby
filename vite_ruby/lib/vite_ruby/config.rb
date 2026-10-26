@@ -38,7 +38,7 @@ class ViteRuby::Config
 
   # Public: The directory where Vite will store the built assets.
   def build_output_dir
-    root.join(public_dir, public_output_dir)
+    Pathname.new(config_path).join(public_dir, public_output_dir)
   end
 
   # Internal: Path to the metadata file written by the Vite dev server.
